@@ -1,5 +1,7 @@
-package br.edu.uniso.apidog;
+package br.edu.uniso.apidog.service;
 
+import br.edu.uniso.apidog.dto.Dog;
+import br.edu.uniso.apidog.repository.DogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +13,7 @@ public class DogService {
     @Autowired
     DogRepository dr;
 
-    void save(Dog dog){
+    public void save(Dog dog){
         dr.save(dog);
     }
 

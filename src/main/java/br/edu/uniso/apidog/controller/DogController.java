@@ -1,5 +1,7 @@
-package br.edu.uniso.apidog;
+package br.edu.uniso.apidog.controller;
 
+import br.edu.uniso.apidog.dto.Dog;
+import br.edu.uniso.apidog.service.DogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +29,11 @@ public class DogController {
     public void addDog(@RequestBody Dog dog){
         dog.setCreatedAt(new Date());
         service.save(dog);
+    }
+
+    @GetMapping("/welcome")
+    public String Welcome(){
+        return "Welcome to dogapi";
     }
 
     @PutMapping("/dogs/{id}")

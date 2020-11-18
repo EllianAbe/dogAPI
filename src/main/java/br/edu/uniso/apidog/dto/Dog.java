@@ -1,4 +1,4 @@
-package br.edu.uniso.apidog;
+package br.edu.uniso.apidog.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
